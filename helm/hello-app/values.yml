@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: your_dockerhub_username/hello-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+
+
+imagePullSecrets:
+  - name: dockerhub-secret
